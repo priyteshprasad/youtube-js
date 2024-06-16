@@ -1,21 +1,10 @@
-:root {
-  --bg-color: white;
-  --text-color: black;
-}
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background-color: white;
+  color: black;
   transition: background-color 0.3s, color 0.3s;
-}
-* {
-  color: var(--text-color);
-}
-body.dark {
-  --bg-color: black;
-  --text-color: white;
 }
 b,
 p {
@@ -24,14 +13,7 @@ p {
 .hidden {
   display: none;
 }
-/* .light {
-  background-color: white;
-  color: black;
-}
-.dark {
-  background-color: rgb(32, 31, 31);
-  color: aliceblue;
-} */
+
 .content {
   display: flex;
 }
@@ -104,7 +86,7 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 2;
-  background-color: var(--bg-color);
+  background-color: white;
   padding: 10px 20px;
   position: sticky;
   top: 0px;
