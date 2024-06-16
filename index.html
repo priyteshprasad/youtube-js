@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="menu_logo">
+
+                <button id="menu_button" class="btn"><i class="fa fa-bars"></i></button>
+                <div class="logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/512px-YouTube_full-color_icon_%282017%29.svg.png?20240107144800"
+                        alt="logo" srcset="">
+                    YouTube Clone
+                </div>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Search" id="search">
+                <button id="search-btn"><i class="fa fa-search"></i></button>
+            </div>
+            <div class="create_notification_avatar">
+                <div>
+                    <button class="btn">
+
+                        <i class="fa fa-video-camera"></i>
+                    </button>
+                </div>
+                <div>
+                    <button class="btn">
+
+                        <i class="fa fa-bell-o"></i>
+                    </button>
+                </div>
+                <div>
+                    <button class="btn"><i class="fa fa-user-circle-o"></i></button>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <div id="column_1" class="column1">
+
+                <div><a href="https://www.youtube.com/"><i class="fa fa-home"></i>&nbsp; Home</a></div>
+                <div><a href="#"><i class="fa fa-strikethrough"></i>&nbsp; Shorts</a></div>
+                <div><a href="#"><i class="fa fa-check-square-o"></i>&nbsp; Subscriptions</a></div>
+                <div><a href="#"><i class="fa fa-play-circle-o"></i>&nbsp; Youtube Music</a></div>
+                <hr>
+                <div><a href="#"><i class="fa fa-history"></i>&nbsp; History</a></div>
+                <div><a href="#"><i class="fa fa-indent"></i>&nbsp; Playlists</a></div>
+                <div><a href="#"><i class="fa fa-caret-square-o-right"></i>&nbsp; Your videos</a></div>
+                <div><a href="#"><i class="fa fa-video-camera"></i>&nbsp; Your movies</a></div>
+                <div><a href="#"><i class="fa fa-clock-o"></i>&nbsp; Watch later</a></div>
+                <div><a href="#"><i class="fa fa-thumbs-o-up"></i>&nbsp; Liked videos</a></div>
+                <div><a href="#"><i class="fa fa-download"></i>&nbsp; Downloads</a></div>
+                <hr>
+                <h3>Subscriptions</h3>
+                <div><a href="#">StudyIQ IAS</a></div>
+                <div><a href="#">NDTV India</a></div>
+                <div><a href="#">Sansad TV</a></div>
+                <div><a href="#">Alan Becker</a></div>
+                <div><a href="#">Daily Dose Of In..</a></div>
+                <div><a href="#">TSeries</a></div>
+
+
+            </div>
+            <div class="column2">
+                <div class="main-video">
+                    <div id="video-player">
+
+                    </div>
+                </div>
+                <div id="description_container"></div>
+                <div id="comments_container"></div>
+
+            </div>
+            <div class="column3">
+                <div class="video-list" id="video-list"></div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
