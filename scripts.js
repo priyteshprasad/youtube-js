@@ -5,6 +5,8 @@ const videoList = document.getElementById("video-list");
 const videoPlayer = document.getElementById("video-player");
 const discriptionContainer = document.getElementById("description_container");
 const menuButton = document.getElementById("menu_button");
+const themeButton = document.getElementById("theme_toggle");
+
 const randomQuery = [
   "cricket",
   "k-pop",
@@ -17,9 +19,28 @@ const randomQuery = [
 
 fetchVideos(randomQuery[Math.floor(Math.random() * randomQuery.length)]);
 
+themeButton.addEventListener("click", () => {
+  console.log("Change theme");
+  const bodyElement = document.getElementsByTagName("body")[0];
+  const bodyClasses = bodyElement.classList;
+  if (bodyClasses.contains("dark")) {
+    bodyClasses.remove("dark");
+  } else {
+    bodyClasses.add("dark");
+  }
+});
+
+searchInput.addEventListener("change", () => {
+  const query = searchInput.value.trim();
+  if (query) {
+    fetchVideos(query);
+  }
+});
 searchBtn.addEventListener("click", () => {
-  const query = searchInput.value;
-  fetchVideos(query);
+  const query = searchInput.value.trim();
+  if (query) {
+    fetchVideos(query);
+  }
 });
 
 menuButton.addEventListener("click", () => {
@@ -116,7 +137,6 @@ function playVideo(videoId) {
   fetchComments(videoId);
 }
 
-///////////////////////
 async function fetchVideoDetails(videoId) {
   // Fetch video details
   const videoResponse = await fetch(
